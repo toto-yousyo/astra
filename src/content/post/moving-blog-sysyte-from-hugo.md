@@ -2,7 +2,6 @@
 publishDate: 2024-09-16T00:00:00Z
 title: I just moved
 excerpt: Explore vital tools and resources for a sleek website. From design to functionality, our guide elevates your online presence.
-image:
 ags:
   - astro
 ---

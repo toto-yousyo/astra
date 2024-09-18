@@ -6,6 +6,7 @@ ags:
   - vire
   - react
 ---
+
 # Create multi entry point for LP develop
 
 ### 手順概要
@@ -13,7 +14,6 @@ ags:
 1.  **Viteのマルチエントリーポイントを使用**: 複数のLPのエントリーポイントを設定。
 2.  **共通コンポーネントの再利用**: 各LPが共通コンポーネントを利用できるようにする。
 3.  **特定のLPをビルドするための設定**: ビルド時に特定のエントリーポイント（LP）だけを生成する設定。
-
 
 ### 2\. 複数のLP用のエントリーポイントを作成
 
@@ -34,7 +34,7 @@ src/
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';  // LP1用のAppコンポーネント
+import App from './App'; // LP1用のAppコンポーネント
 
 ReactDOM.render(
   <React.StrictMode>
@@ -64,7 +64,7 @@ Viteの設定ファイルで、複数のエントリーポイントを設定し�
 ```js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import tailwindcss from "tailwindcss";  // resolve関数をインポート
+import tailwindcss from 'tailwindcss'; // resolve関数をインポート
 import { resolve } from 'path';
 // https://vitejs.dev/config/
 const lp = process.env.LP || 'lp1'; // LPを環境変数で選択
@@ -96,8 +96,11 @@ export default defineConfig({
 例えば、LP=lp1 npm run buildのように実行すれば、lp1だけがビルドされます。
 
 ### 5\. 特定のLPだけをビルドする
+
 zshrcに下記のaliasを設置する
+
 ```zsh
 alias bd='(){LP=$1 npm run build}'
 ```
+
 呼び出す時はbd {lpのフォルダ名} で希望のフォルダ名のフォルダがdistに出来上がっている。

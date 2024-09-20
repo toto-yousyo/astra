@@ -1,5 +1,5 @@
 ---
-title: Create mdfile include frontmatter 
+title: Create mdfile include frontmatter
 excerpt: I want write blog contents everyday, so I start easy writing.
 image: '~/assets/images/desert-9019840_1280.jpg'
 tags:
@@ -34,8 +34,8 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 
 ```yaml
 ---
-title: ""
-date: "{{ date }}"
+title: ''
+date: '{{ date }}'
 tags: []
 ---
 ```

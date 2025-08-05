@@ -1,0 +1,22 @@
+---
+const cocktailArray = ['ホワイトレディ', 'ブルーハワイ', 'ニューヨーク'];
+---
+
+<html lang="ja">
+  <hrad>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>ループ構文</title>
+  </hrad>
+  <body>
+    <h1>Astroでのループ構文の利用</h1>
+    <section>
+      <ul>
+        {cocktailArray.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+  </body>
+
+</html>

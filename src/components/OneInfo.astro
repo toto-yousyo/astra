@@ -1,0 +1,15 @@
+---
+const { title, content } = Astro.props;
+---
+
+<section>
+  <h4>{title}</h4>
+  <p>{content}</p>
+</section>
+
+<style>
+  section {
+    border: green 1px dashes;
+    margin: 10px;
+  }
+</style>

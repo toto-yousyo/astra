@@ -1,0 +1,27 @@
+---
+import OneInfo from '../components/OneInfo.astro';
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Props Basic</title>
+  </head>
+  <body>
+    <h1>Props Basic</h1>
+    <section>
+      <h2>input direct to property</h2>
+      <OneInfo title="Using Props" content="Use Props for give data to child components" />
+    </section>
+  </body>
+</html>
+
+<style>
+  section {
+    border: blue 1px solid;
+    margin: 10px;
+  }
+</style>

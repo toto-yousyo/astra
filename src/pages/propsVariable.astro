@@ -1,0 +1,37 @@
+---
+import CocktailItem from '../components/CocktailItem.astro';
+
+interface Cocktail {
+  id: number;
+  name: string;
+  price: number;
+  note?: string;
+}
+
+const whiteLady: Cocktail = {
+  id: 55126,
+  name: 'WhiteLady',
+  price: 1200,
+  note: 'Sweet',
+};
+
+const blueHawaii: Cocktail = {
+  id: 16558,
+  name: 'BlueHawaii',
+  price: 1400,
+};
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <h1>Props using Variable</h1>
+    <CocktailItem id={whiteLady.id} name={whiteLady.name} price={whiteLady.price} note={whiteLady.note} />
+    <CocktailItem id={blueHawaii.id} name={blueHawaii.name} price={blueHawaii.pirce} note={blueHawaii.note} />
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  id: number;
+  name: string;
+  price: number;
+  note?: string;
+}
+
+const { id, name, price, note = '--' } = Astro.props;
+---
+
+<section>
+  <h4>Cocktail infomation</h4>
+  <dl>
+    <dt>Cocktail ID</dt>
+    <dd>{id}</dd>
+    <dt>Cocktail Name</dt>
+    <dd>{name}</dd>
+    <dt>Price</dt>
+    <dd>{price}</dd>
+    <dt>note</dt>
+    <dd>{note}</dd>
+  </dl>
+</section>
+
+<style>
+  section {
+    border: green 1px dashed;
+    margin: 10px;
+  }
+</style>

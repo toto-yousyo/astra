@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: string;
+  tag: string;
+}
+
+const { name, tag } = Astro.props;
+---
+
+<section>
+  <h4>{name} condition</h4>
+  {tag}
+</section>
+
+<style>
+  section {
+    border: green 1px dashed;
+    margin: 10px;
+  }
+</style>

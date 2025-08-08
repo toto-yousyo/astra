@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<section>
+  <h4>{name} of condition</h4>
+  <slot>
+    <p>{name} is not have problem</p>
+  </slot>
+</section>
+
+<style>
+  section {
+    border: green 1px dashed;
+    margin: 10px;
+  }
+</style>
